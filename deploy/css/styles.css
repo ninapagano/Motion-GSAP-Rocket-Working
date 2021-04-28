@@ -424,6 +424,7 @@ textarea {
     SVG Container
 ============= */
 #svg-container {
+  visibility: hidden;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". svg-container .";

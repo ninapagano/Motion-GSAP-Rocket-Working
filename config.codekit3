@@ -46,6 +46,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/design/launch.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/design/launch.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/design/rocket.sketch": {
 		"cB": 0,
 		"ft": 8192,
@@ -60,6 +70,38 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/dev/content/svg-container.html",
+		"oF": 0
+		},
+	"/dev/content/svg/background.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/background.html",
+		"oF": 0
+		},
+	"/dev/content/svg/foreground.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/foreground.html",
+		"oF": 0
+		},
+	"/dev/content/svg/moon.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/moon.html",
+		"oF": 0
+		},
+	"/dev/content/svg/ship.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/ship.html",
 		"oF": 0
 		},
 	"/dev/global/footer.kit": {
@@ -358,7 +400,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 640184504.22365296,
-	"displayValue": "Motion-GSAP-Rocket-Start",
+	"displayValue": "Motion-GSAP-Rocket-Working",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 1
