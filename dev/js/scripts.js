@@ -1,9 +1,10 @@
 //IMPORTS
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
+import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools);
+gsap.registerPlugin(GSDevTools, MotionPathPlugin);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
@@ -31,7 +32,7 @@ ready(() => {
 
   /* add your code here */
   //Variables
-  let mainTL = gsap.timeline({id:"main"});
+  let mainTL = gsap.timeline({id:"main", paused:true});
   let flamesTL = gsap.timeline({paused:true});
 
 
@@ -80,7 +81,7 @@ ready(() => {
     .from("#front-mtns", {duration:5.5, scale:10, y:"+=600", ease:"power4.out"}, "zoom")
     .from("#trees-5", {duration:5.5, scale:10, y:"+=420", ease:"power4.out"}, "zoom")
     .from("#trees-4", {duration:5.5, scale:10, y:"+=420", ease:"power4.out"}, "zoom")
-    .from("#trees-3", {duration:5.25, scale:10, y:"+=420", ease:"power4.out"}, "zoom")
+    .from("#trees-3", {duration:5.25, scale:10, y:"+=420", ease:"power4.out", onStart:callBackTest}, "zoom")
     .from("#trees-2", {duration:5, scale:10, y:"+=420", ease:"power4.out"}, "zoom")
     .from("#trees-1", {duration:4.75, scale:10, y:"+=400", ease:"power4.out"}, "zoom")
 
@@ -148,12 +149,42 @@ ready(() => {
   }
 
   //*********** flightTL ****************
+  function flightTL(){
+    let tl = gsap.timeline();
+
+    tl.to("#space-ship", {
+      duration:15,
+      motionPath:{
+        path:"#flightPath",
+        align:"#flightPath",
+        alignOrigin:[0.5, 0.5],
+        autoRotate:90,
+        start: 0.1,
+        end: 0.5,
+      },
+      ease:"power4.out"
+
+
+    })
+
+    ;//tl END
+
+    return tl;
+
+  }
 
 
 //*********** moonLandingTL ****************
 
 
 //*********** flame functions DO NOT INCLUDE IN MAIN TL ****************
+
+function callBackTest(){
+
+  console.log("hello");
+
+}
+
 function controlFlames(){
 
   showSmoke();
@@ -185,10 +216,11 @@ mainTL.add(fadeInTL())
 .add(zoomTL(),"-=4")
 .add(spaceshipTL(),"-=6")
 .add(liftOffTL())
+.add(flightTL(),"target")
 
 ;//tl END
 
-
+mainTL.play("target");
 
 
 
