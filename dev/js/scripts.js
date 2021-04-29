@@ -1,9 +1,10 @@
 //IMPORTS
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
+import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools);
+gsap.registerPlugin(GSDevTools, MotionPathPlugin);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
@@ -27,7 +28,7 @@ let ready = (callback) => {
 
 ready(() => {
   //add tools
-//GSDevTools.create();
+  //GSDevTools.create();
 
   /* add your code here */
   //Variables
@@ -51,7 +52,7 @@ ready(() => {
     gsap.set(".smoke",{display:"none"});
 
     //*********** flightTL init ****************
-
+    // gsap.set("#space-ship", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%"});
     //*********** moonLandingTL init ****************
 
 
@@ -95,29 +96,29 @@ ready(() => {
     let tl = gsap.timeline();
 
     tl.from("#space-ship",{y:"+=500", duration:0.5})
-            .from("#shadow",{alpha:0, duration:0.5})
-            .from("#cone",{alpha:0, duration:0.5})
-            .from("#window",{scale:0, duration:0.5})
-            .from("#window-bg",{alpha:0, duration:0.5})
-            .from("#window-glass",{alpha:0, duration:0.5})
-            .from("#window-bars",{alpha:0, duration:0.5})
+    .from("#shadow",{alpha:0, duration:0.5})
+    .from("#cone",{alpha:0, duration:0.5})
+    .from("#window",{scale:0, duration:0.5})
+    .from("#window-bg",{alpha:0, duration:0.5})
+    .from("#window-glass",{alpha:0, duration:0.5})
+    .from("#window-bars",{alpha:0, duration:0.5})
 
-            .from("#eng-middle-left",{alpha:0, duration:0.25},"mid-eng-1")
-            //.from("#left-mid-bone",{scale:0, duration:0.25},"mid-eng-2")
-            .to("#eng-middle-left",{rotation:0, duration:0.25},"mid-eng-3")
-            .from("#eng-middle-right",{alpha:0, duration:0.25},"mid-eng-1")
-            //.from("#right-mid-bone",{scale:0, duration:0.25},"mid-eng-2")
-            .to("#eng-middle-right",{rotation:0, duration:0.25},"mid-eng-3")
+    .from("#eng-middle-left",{alpha:0, duration:0.25},"mid-eng-1")
+    //.from("#left-mid-bone",{scale:0, duration:0.25},"mid-eng-2")
+    .to("#eng-middle-left",{rotation:0, duration:0.25},"mid-eng-3")
+    .from("#eng-middle-right",{alpha:0, duration:0.25},"mid-eng-1")
+    //.from("#right-mid-bone",{scale:0, duration:0.25},"mid-eng-2")
+    .to("#eng-middle-right",{rotation:0, duration:0.25},"mid-eng-3")
 
-            .from("#eng-left",{alpha:0, duration:0.25},"eng-1")
-            //.from("#left-bone",{scale:0, duration:0.25},"eng-2")
-            .to("#eng-left",{rotation:0, duration:0.25},"eng-3")
-            .from("#eng-right",{alpha:0, duration:0.25},"eng-1")
-            //.from("#right-bone",{scale:0, duration:0.25},"eng-2")
-            .to("#eng-right",{rotation:0, duration:0.25},"eng-3")
-            .from("#eng-left-bottom",{y:"-=20", duration:0.5})
-            .from("#eng-right-bottom",{y:"-=20", duration:0.5},"-=0.25")
-            .to("#space-ship",{y:"+=320", duration:2, ease: "bounce.out"})
+    .from("#eng-left",{alpha:0, duration:0.25},"eng-1")
+    //.from("#left-bone",{scale:0, duration:0.25},"eng-2")
+    .to("#eng-left",{rotation:0, duration:0.25},"eng-3")
+    .from("#eng-right",{alpha:0, duration:0.25},"eng-1")
+    //.from("#right-bone",{scale:0, duration:0.25},"eng-2")
+    .to("#eng-right",{rotation:0, duration:0.25},"eng-3")
+    .from("#eng-left-bottom",{y:"-=20", duration:0.5})
+    .from("#eng-right-bottom",{y:"-=20", duration:0.5},"-=0.25")
+    .to("#space-ship",{y:"+=320", duration:2, ease: "bounce.out"})
 
     ;//tl END
 
@@ -131,15 +132,15 @@ ready(() => {
     let tl = gsap.timeline();
 
     tl.to("#space-ship",{duration:0.15, rotation:-10,ease:"none"})
-        .to("#space-ship",{duration:0.15, rotation:10, yoyo:true, repeat:10,ease:"none"})
-        .to("#space-ship",{duration:0.15, rotation:0,ease:"none", onComplete:controlFlames})
-        .from("#smoke-1",{duration:3.5, y:"+=150", scale:.75, alpha:0.5, ease: "power3.in"},'upAndAway')
-        .from("#smoke-2",{duration:4, y:"+=150", scale:.75, alpha:0.5, ease: "power3.in"},'upAndAway')
-        .to("#space-ship",{duration:5, y:"-=700", scale:0.5, ease: "power3.in"},"upAndAway")
-        .to("#clouds",{duration:5, y:"+=700", ease: "power3.in"},'upAndAway')
-        .to("#front",{duration:5, y:"+=600", ease: "power3.in"},'upAndAway')
-        .to("#middle",{duration:5, y:"+=500", ease: "power3.in"},'upAndAway')
-        .from("#space",{duration:5,alpha:0, ease: "power3.in"},'upAndAway')
+    .to("#space-ship",{duration:0.15, rotation:10, yoyo:true, repeat:10,ease:"none"})
+    .to("#space-ship",{duration:0.15, rotation:0,ease:"none", onComplete:controlFlames})
+    .from("#smoke-1",{duration:3.5, y:"+=150", scale:.75, alpha:0.5, ease: "power3.in"},'upAndAway')
+    .from("#smoke-2",{duration:4, y:"+=150", scale:.75, alpha:0.5, ease: "power3.in"},'upAndAway')
+    .to("#space-ship",{duration:5, y:"-=700", scale:0.5, ease: "power3.in"},"upAndAway")
+    .to("#clouds",{duration:5, y:"+=700", ease: "power3.in"},'upAndAway')
+    .to("#front",{duration:5, y:"+=600", ease: "power3.in"},'upAndAway')
+    .to("#middle",{duration:5, y:"+=500", ease: "power3.in"},'upAndAway')
+    .from("#space",{duration:5,alpha:0, ease: "power3.in"},'upAndAway')
 
     ;//tl END
 
@@ -149,43 +150,44 @@ ready(() => {
 
   //*********** flightTL ****************
 
-  //*********** moonLandingTL ****************
+
+//*********** moonLandingTL ****************
 
 
-  //*********** flame functions DO NOT INCLUDE IN MAIN TL ****************
-  function controlFlames(){
+//*********** flame functions DO NOT INCLUDE IN MAIN TL ****************
+function controlFlames(){
 
-      showSmoke();
+  showSmoke();
 
-      console.log('SHOW TIME');
-      gsap.set(".flames",{display:"block"});
+  console.log('SHOW TIME');
+  gsap.set(".flames",{display:"block"});
 
-      flamesTL.to("#left-blue",{duration:0.25, scaleY:.25,yoyo:true, repeat:-1},"flames")
-              .to("#left-dark-blue",{duration:0.15, scaleY:.15,yoyo:true, repeat:-1},"flames")
-              .to("#right-blue",{duration:0.25, scaleY:.25,yoyo:true, repeat:-1},"flames")
-              .to("#right-dark-blue",{duration:0.15, scaleY:.15,yoyo:true, repeat:-1},"flames")
+  flamesTL.to("#left-blue",{duration:0.25, scaleY:.25,yoyo:true, repeat:-1},"flames")
+  .to("#left-dark-blue",{duration:0.15, scaleY:.15,yoyo:true, repeat:-1},"flames")
+  .to("#right-blue",{duration:0.25, scaleY:.25,yoyo:true, repeat:-1},"flames")
+  .to("#right-dark-blue",{duration:0.15, scaleY:.15,yoyo:true, repeat:-1},"flames")
 
-      flamesTL.play()
-  }
+  flamesTL.play()
+}
 
-  function showSmoke(){
-    gsap.set(".smoke",{display:"block"});
-  }
+function showSmoke(){
+  gsap.set(".smoke",{display:"block"});
+}
 
 
-  //1. set initial properties
-  init();
+//1. set initial properties
+init();
 
-  //2. show content - prevents FOUC
-  gsap.set('#svg-container',{visibility:"visible"});
+//2. show content - prevents FOUC
+gsap.set('#svg-container',{visibility:"visible"});
 
-  //3. BUILD Main timeline
- mainTL.add(fadeInTL())
-      .add(zoomTL(),"-=4")
-      .add(spaceshipTL(),"-=6")
-      .add(liftOffTL())
+//3. BUILD Main timeline
+mainTL.add(fadeInTL())
+.add(zoomTL(),"-=4")
+.add(spaceshipTL(),"-=6")
+.add(liftOffTL())
 
-  ;//tl END
+;//tl END
 
 
 
