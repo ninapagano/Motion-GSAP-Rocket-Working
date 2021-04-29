@@ -32,13 +32,13 @@ ready(() => {
 
   /* add your code here */
   //Variables
-  let mainTL = gsap.timeline({id:"main", paused:true});
+  let mainTL = gsap.timeline({id:"main"});
   let flamesTL = gsap.timeline({paused:true});
 
 
   function init(){
     //***********  fadeInTL init ****************
-
+    gsap.set("#moon", {alpha:0});
     //*********** zoomTL init ****************
     gsap.set(["#orange-mtn","#red-mtn","#front-mtns",".trees"], {transformOrigin:"center center"});
     //*********** spaceshipTL init ****************
@@ -159,13 +159,14 @@ ready(() => {
         align:"#flightPath",
         alignOrigin:[0.5, 0.5],
         autoRotate:90,
-        start: 0.1,
-        end: 0.5,
+        // start: 0.1,
+        // end: 0.5,
       },
       ease:"power4.out"
 
 
     })
+    .to("#moon", {alpha:1});
 
     ;//tl END
 
@@ -220,7 +221,7 @@ mainTL.add(fadeInTL())
 
 ;//tl END
 
-mainTL.play("target");
+//mainTL.play("target");
 
 
 
