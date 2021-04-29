@@ -1,10 +1,9 @@
 //IMPORTS
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
-import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools, MotionPathPlugin);
+gsap.registerPlugin(GSDevTools);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
