@@ -27,10 +27,12 @@ let ready = (callback) => {
 
 ready(() => {
   //add tools
-GSDevTools.create();
+//GSDevTools.create();
 
   /* add your code here */
+  //Variables
   let mainTL = gsap.timeline({id:"main"});
+  let flamesTL = gsap.timeline({paused:true});
 
 
   function init(){
@@ -44,6 +46,9 @@ GSDevTools.create();
     gsap.set(".left-engines", {rotation:90});
     gsap.set(".right-engines", {rotation:-90});
     //*********** liftOffTL init ****************
+    gsap.set("#space-ship",{transformOrigin:"center"});
+    gsap.set(["#smoke-1","#smoke-2"],{transformOrigin:"center bottom"});
+    gsap.set(".smoke",{display:"none"});
 
     //*********** flightTL init ****************
 
@@ -122,9 +127,50 @@ GSDevTools.create();
 
   //*********** liftOffTL ****************
 
+  function liftOffTL(){
+    let tl = gsap.timeline();
+
+    tl.to("#space-ship",{duration:0.15, rotation:-10,ease:"none"})
+        .to("#space-ship",{duration:0.15, rotation:10, yoyo:true, repeat:10,ease:"none"})
+        .to("#space-ship",{duration:0.15, rotation:0,ease:"none", onComplete:controlFlames})
+        .from("#smoke-1",{duration:3.5, y:"+=150", scale:.75, alpha:0.5, ease: "power3.in"},'upAndAway')
+        .from("#smoke-2",{duration:4, y:"+=150", scale:.75, alpha:0.5, ease: "power3.in"},'upAndAway')
+        .to("#space-ship",{duration:5, y:"-=700", scale:0.5, ease: "power3.in"},"upAndAway")
+        .to("#clouds",{duration:5, y:"+=700", ease: "power3.in"},'upAndAway')
+        .to("#front",{duration:5, y:"+=600", ease: "power3.in"},'upAndAway')
+        .to("#middle",{duration:5, y:"+=500", ease: "power3.in"},'upAndAway')
+        .from("#space",{duration:5,alpha:0, ease: "power3.in"},'upAndAway')
+
+    ;//tl END
+
+    return tl;
+
+  }
+
   //*********** flightTL ****************
 
   //*********** moonLandingTL ****************
+
+
+  //*********** flame functions DO NOT INCLUDE IN MAIN TL ****************
+  function controlFlames(){
+
+      showSmoke();
+
+      console.log('SHOW TIME');
+      gsap.set(".flames",{display:"block"});
+
+      flamesTL.to("#left-blue",{duration:0.25, scaleY:.25,yoyo:true, repeat:-1},"flames")
+              .to("#left-dark-blue",{duration:0.15, scaleY:.15,yoyo:true, repeat:-1},"flames")
+              .to("#right-blue",{duration:0.25, scaleY:.25,yoyo:true, repeat:-1},"flames")
+              .to("#right-dark-blue",{duration:0.15, scaleY:.15,yoyo:true, repeat:-1},"flames")
+
+      flamesTL.play()
+  }
+
+  function showSmoke(){
+    gsap.set(".smoke",{display:"block"});
+  }
 
 
   //1. set initial properties
@@ -137,6 +183,7 @@ GSDevTools.create();
  mainTL.add(fadeInTL())
       .add(zoomTL(),"-=4")
       .add(spaceshipTL(),"-=6")
+      .add(liftOffTL())
 
   ;//tl END
 
