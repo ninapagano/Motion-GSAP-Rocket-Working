@@ -158,7 +158,7 @@ ready(() => {
         path:"#flightPath",
         align:"#flightPath",
         alignOrigin:[0.5, 0.5],
-        autoRotate:90,
+        autoRotate:90
         // start: 0.1,
         // end: 0.5,
       },
@@ -166,7 +166,7 @@ ready(() => {
 
 
     })
-    .to("#moon", {alpha:1});
+    //.to("#moon", {alpha:1});
 
     ;//tl END
 
