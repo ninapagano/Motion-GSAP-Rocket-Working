@@ -2,9 +2,11 @@
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin";
+import {CustomEase} from "gsap/CustomEase";
+import {CustomWiggle} from "gsap/CustomWiggle";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools, MotionPathPlugin);
+gsap.registerPlugin(GSDevTools, MotionPathPlugin, CustomEase, CustomWiggle);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
@@ -32,13 +34,26 @@ ready(() => {
 
   /* add your code here */
   //Variables
-  let mainTL = gsap.timeline({id:"main"});
+  let mainTL = gsap.timeline({id:"main", paused:true});
   let flamesTL = gsap.timeline({paused:true});
 
 
   function init(){
+
+      CustomWiggle.create("myWiggle", {wiggles: 50, type:"uniform"});
     //***********  fadeInTL init ****************
-    gsap.set("#moon", {alpha:0});
+      gsap.set("#svg-container", {backgroundColor:"#333"});
+      gsap.set("#moon", {x:300, y:300});
+
+      gsap.to("#moon", {duration:0.5, x:"+=15", ease:"myWiggle"});
+
+
+
+
+
+      //****** transformOrigin VS. svgOrigin  *****\\
+      // gsap.to("#moon", {duration:5, rotation:360, transformOrigin:"50% 50%"});
+      //gsap.to("#moon", {duration:5, rotation:360, svgOrigin:"512 512"});
     //*********** zoomTL init ****************
     gsap.set(["#orange-mtn","#red-mtn","#front-mtns",".trees"], {transformOrigin:"center center"});
     //*********** spaceshipTL init ****************
