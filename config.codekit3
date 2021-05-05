@@ -96,6 +96,46 @@
 		"oAP": "/dev/content/svg/moon.html",
 		"oF": 0
 		},
+	"/dev/content/svg/rocket-01.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev/content/svg/rocket-01.html",
+		"oF": 0
+		},
+	"/dev/content/svg/rocket-02.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev/content/svg/rocket-02.html",
+		"oF": 0
+		},
+	"/dev/content/svg/rocket-03.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev/content/svg/rocket-03.html",
+		"oF": 0
+		},
+	"/dev/content/svg/rocket-04.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev/content/svg/rocket-04.html",
+		"oF": 0
+		},
+	"/dev/content/svg/rocket-05.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev/content/svg/rocket-05.html",
+		"oF": 0
+		},
 	"/dev/content/svg/ship.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -400,7 +440,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 640184504.22365296,
-	"displayValue": "Motion-GSAP-Rocket-Working",
+	"displayValue": "rocket working2",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 1
