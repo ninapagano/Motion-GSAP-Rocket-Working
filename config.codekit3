@@ -72,76 +72,52 @@
 		"oAP": "/dev/content/svg-container.html",
 		"oF": 0
 		},
-	"/dev/content/svg/background.kit": {
+	"/dev/content/svg/newrocket-01.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/dev/content/svg/background.html",
+		"oAP": "/dev/content/svg/newrocket-01.html",
 		"oF": 0
 		},
-	"/dev/content/svg/foreground.kit": {
+	"/dev/content/svg/newrocket-02.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/dev/content/svg/foreground.html",
+		"oAP": "/dev/content/svg/newrocket-02.html",
 		"oF": 0
 		},
-	"/dev/content/svg/moon.kit": {
+	"/dev/content/svg/newrocket-03.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/dev/content/svg/moon.html",
+		"oAP": "/dev/content/svg/newrocket-03.html",
 		"oF": 0
 		},
-	"/dev/content/svg/rocket-01.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dev/content/svg/rocket-01.html",
-		"oF": 0
-		},
-	"/dev/content/svg/rocket-02.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dev/content/svg/rocket-02.html",
-		"oF": 0
-		},
-	"/dev/content/svg/rocket-03.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dev/content/svg/rocket-03.html",
-		"oF": 0
-		},
-	"/dev/content/svg/rocket-04.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dev/content/svg/rocket-04.html",
-		"oF": 0
-		},
-	"/dev/content/svg/rocket-05.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dev/content/svg/rocket-05.html",
-		"oF": 0
-		},
-	"/dev/content/svg/ship.kit": {
+	"/dev/content/svg/newrocket-04.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/dev/content/svg/ship.html",
+		"oAP": "/dev/content/svg/newrocket-04.html",
+		"oF": 0
+		},
+	"/dev/content/svg/newrocket-05.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/newrocket-05.html",
+		"oF": 0
+		},
+	"/dev/content/svg/newrocket-06.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/newrocket-06.html",
 		"oF": 0
 		},
 	"/dev/global/footer.kit": {
