@@ -34,7 +34,7 @@ ready(() => {
 
   /* add your code here */
   //Variables
-  let mainTL = gsap.timeline({id:"main", paused:true});
+  let mainTL = gsap.timeline({id:"main"});
   let flamesTL = gsap.timeline({paused:true});
 
 
@@ -42,8 +42,10 @@ ready(() => {
 
       CustomWiggle.create("myWiggle", {wiggles: 50, type:"uniform"});
     //***********  fadeInTL init ****************
-      gsap.set("#svg-container", {backgroundColor:"#333"});
-      gsap.set("#moon", {x:300, y:300});
+    //gsap.set("#moon", {alpha:0});
+      //gsap.set("#svg-container", {backgroundColor:"#333"});
+      gsap.set("#moon", {x:-100});
+    //  gsap.set("#moon", { y:"+=200", delay:2});
 
       gsap.to("#moon", {duration:0.5, x:"+=15", ease:"myWiggle"});
 
@@ -133,7 +135,8 @@ ready(() => {
     .to("#eng-right",{rotation:0, duration:0.25},"eng-3")
     .from("#eng-left-bottom",{y:"-=20", duration:0.5})
     .from("#eng-right-bottom",{y:"-=20", duration:0.5},"-=0.25")
-    .to("#space-ship",{y:"+=320", duration:2, ease: "bounce.out"})
+    .to("#space-ship",{y:"+=320", duration:2, ease: "bounce.out"},"shipBounce")
+    .set("#moon",{x:200},"shipBounce+=1")
 
     ;//tl END
 
