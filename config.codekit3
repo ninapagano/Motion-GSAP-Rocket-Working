@@ -70,53 +70,15 @@
 		"oAP": "/dev/content/svg/extra",
 		"oF": 0
 		},
-	"/dev/content/svg/newrocket-01.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/dev/content/svg/newrocket-01.html",
-		"oF": 0
-		},
-	"/dev/content/svg/newrocket-02.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/dev/content/svg/newrocket-02.html",
-		"oF": 0
-		},
-	"/dev/content/svg/newrocket-03.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/dev/content/svg/newrocket-03.html",
-		"oF": 0
-		},
-	"/dev/content/svg/newrocket-04.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/dev/content/svg/newrocket-04.html",
-		"oF": 0
-		},
-	"/dev/content/svg/newrocket-05.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/dev/content/svg/newrocket-05.html",
-		"oF": 0
-		},
-	"/dev/content/svg/newrocket-06.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/dev/content/svg/newrocket-06.html",
-		"oF": 0
+	"/dev/content/svg/xrocket-01.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dev/content/svg/xrocket-01.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/dev/global/footer.kit": {
 		"cB": 0,
@@ -414,7 +376,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 640184504.22365296,
-	"displayValue": "rocket working2",
+	"displayValue": "rocket working3",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 1
