@@ -44,10 +44,10 @@ ready(() => {
     //***********  fadeInTL init ****************
     //gsap.set("#moon", {alpha:0});
       //gsap.set("#svg-container", {backgroundColor:"#333"});
-      gsap.set("#moon", {x:-100});
+      gsap.set("#newrocket-01", {x:-100});
     //  gsap.set("#moon", { y:"+=200", delay:2});
 
-      gsap.to("#moon", {duration:0.5, x:"+=15", ease:"myWiggle"});
+      gsap.to("#newrocket-01", {duration:1, x:"+=15", ease:"myWiggle"});
 
 
 
