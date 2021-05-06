@@ -70,6 +70,14 @@
 		"oAP": "/dev/content/svg/extra",
 		"oF": 0
 		},
+	"/dev/content/svg/xrocket-01.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/content/svg/xrocket-01.html",
+		"oF": 0
+		},
 	"/dev/content/svg/xrocket-01.svg": {
 		"ft": 2097152,
 		"miP": 0,

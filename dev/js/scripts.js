@@ -22,7 +22,6 @@ ready(() => {
   /* add your code here */
   //Variables
   let mainTL = gsap.timeline({id:"main"});
-  let flamesTL = gsap.timeline({paused:true});
 
 
   function init(){
@@ -30,18 +29,18 @@ ready(() => {
       CustomWiggle.create("myWiggle", {wiggles: 50, type:"uniform"});
     //***********  fadeInTL init ****************
       //gsap.set("#newrocket-01", {x:-100});
-      gsap.set("#newrocket-01", { y:"+=200", delay:2});
+      gsap.set("#Layer_12", { y:"+=200", delay:2});
 
-      gsap.to("#newrocket-01", {duration:1, x:"+=5", ease:"myWiggle"});
+      gsap.to("#Layer_12", {duration:1, x:"+=5", ease:"myWiggle"});
 
 
     //*********** zoomTL init ****************
-    gsap.set(["#newrocket-02","#rnewrocket-03","#newrocket-04","#newrocket-05"], {transformOrigin:"center center"});
+    gsap.set(["#Layer_11","#YObubble","#pbubble"], {transformOrigin:"center center"});
     //*********** spaceshipTL init ****************
     //gsap.set(["#newrocket-01"], {transformOrigin:"center"});
 
     //*********** liftOffTL init ****************
-    gsap.set(["#newrocket-01"],{transformOrigin:"center bottom"});
+    gsap.set(["#Layer_12"],{transformOrigin:"center center"});
   
 
     //*********** flightTL init ****************
@@ -54,7 +53,8 @@ ready(() => {
   function fadeInTL(){
     let tl = gsap.timeline();
 
-    tl.from("#backcloud", {alpha:0, duration:4, scale:20})
+    tl.from("#backcloud", {alpha:0, duration:4, scale:10})
+    tl.from("#pbubble", {alpha:0, duration:4, scale:10})
     ;//tl END
 
     return tl;
@@ -65,11 +65,9 @@ ready(() => {
   function flightTL(){
     let tl = gsap.timeline();
 
-    tl.to("#newrocket-01", {
+    tl.to("#Layer_12", {
       duration:15,
       motionPath:{
-        //path:"#cls-4",
-        //align:"#cls-4",
         start: "top 10%",
         end: "bottom 65%",
         alignOrigin:[0.5, 0.5],
@@ -79,7 +77,7 @@ ready(() => {
       },
       ease:"power4.out"
 
-
+      
     })
     //.to("#moon", {alpha:1});
 
@@ -109,6 +107,7 @@ gsap.set('#svg-container',{visibility:"visible"});
 
 //3. BUILD Main timeline
 mainTL.add(fadeInTL())
+mainTL.add(flightTL())
 //.add(zoomTL(),"-=4")
 //.add(liftOffTL())
 //.add(flightTL(),"target")
