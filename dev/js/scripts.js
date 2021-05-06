@@ -28,14 +28,14 @@ ready(() => {
 
       CustomWiggle.create("myWiggle", {wiggles: 50, type:"uniform"});
     //***********  fadeInTL init ****************
-      //gsap.set("#newrocket-01", {x:-100});
       gsap.set("#Layer_12", { y:"+=200", delay:2});
 
-      gsap.to("#Layer_12", {duration:1, x:"+=5", ease:"myWiggle"});
+      gsap.to("#Layer_12", {duration:1, y:"1400", ease:"myWiggle"});
 
 
     //*********** zoomTL init ****************
-    gsap.set(["#Layer_11","#YObubble","#pbubble"], {transformOrigin:"center center"});
+    gsap.set(["#pbubble", "#YObubble"], {transformOrigin:"center center"});
+    
     //*********** spaceshipTL init ****************
     //gsap.set(["#newrocket-01"], {transformOrigin:"center"});
 
@@ -44,7 +44,7 @@ ready(() => {
   
 
     //*********** flightTL init ****************
-    gsap.set("#newrocket-01", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%"});
+    gsap.set("#Layer_12", {xPercent:-50, yPercent:-50, transformOrigin:"center top"});
 
   }
 
@@ -54,7 +54,8 @@ ready(() => {
     let tl = gsap.timeline();
 
     tl.from("#backcloud", {alpha:0, duration:4, scale:10})
-    tl.from("#pbubble", {alpha:0, duration:4, scale:10})
+    tl.from("#pbubble", {alpha:0, duration:2, scale:10})
+    tl.from("#purple", {alpha:0, duration:2, scale:10})
     ;//tl END
 
     return tl;
@@ -65,29 +66,26 @@ ready(() => {
   function flightTL(){
     let tl = gsap.timeline();
 
-    tl.to("#Layer_12", {
-      duration:15,
-      motionPath:{
-        start: "top 10%",
-        end: "bottom 65%",
-        alignOrigin:[0.5, 0.5],
-        autoRotate:90
+    tl.to("#Layer_12"],{
+      duration:10,
+      y: 600,
+      //motionPath:{
+        //start: "bottom 10%",
+        //end: "top 65%",
+        //alignOrigin:[0.5, 0.5],
+        //autoRotate:90
         // start: 0.1,
         // end: 0.5,
-      },
-      ease:"power4.out"
+    },
 
-      
-    })
     //.to("#moon", {alpha:1});
 
-    ;//tl END
+    //tl END
 
     return tl;
 
-  }
 
-
+}
 //*********** moonLandingTL ****************
 
 
